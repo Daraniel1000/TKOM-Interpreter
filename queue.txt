@@ -1,0 +1,65 @@
+class Queue 
+{
+	public constructor()
+	{
+		array = new int[2];
+		capacity = 2;
+		size = 0;
+	}
+	
+	public destructor()
+	{
+		delete array;
+	}
+	
+	private int array;
+	private int capacity;
+	private int size;
+	
+	void push(int n)
+	{
+		array[size] = n;
+		size = size + 1;
+		switch(size)
+		{
+			if capacity:
+				realloc(2*capacity);
+				break;
+			default:
+				break;
+		};
+	}
+	
+	int pop()
+	{
+		switch(size)
+		{
+			if 0:
+				return 
+			default:
+				size = size - 1;
+				return array[size];
+		};
+	}
+	
+	void realloc(int newCapacity)
+	{
+		int[] newArray = new int[newCapacity];
+		int i = 0;		
+		while (i < size)
+		{
+			newArray[i] = array[i];
+			i = i + 1;
+		};
+		delete array;
+		array = newArray;
+	}
+}
+
+main 
+{
+	Queue queue;
+	queue = new Queue();
+	queue.push(5);
+	print(queue.pop());
+}
