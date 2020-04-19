@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,6 +33,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/FileReader.cpp" />
+		<Unit filename="src/FileReader.h" />
+		<Unit filename="src/Keywords.h" />
+		<Unit filename="src/Lekser.cpp" />
+		<Unit filename="src/Lekser.h" />
+		<Unit filename="src/Token.h" />
+		<Unit filename="src/Token_Types.h" />
+		<Unit filename="src/projekt.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

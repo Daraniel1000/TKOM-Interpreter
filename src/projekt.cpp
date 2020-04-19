@@ -1,7 +1,6 @@
 ﻿#include<iostream>
 #include<exception>
 #include"Lekser.h"
-#include"Token_Types.h"
 using namespace std;
 
 int main(int argc, const char** argv)
