@@ -3,7 +3,7 @@
 
 #include<unordered_map>
 #include"Token_Types.h"
-using TokenType = utils::TokenType;
+using TokenType = tokenUtils::TokenType;
 
 namespace tokenUtils
 {

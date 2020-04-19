@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.cpp
+	"FileReader.h"
+	<exception>
+
+1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.h
+	<fstream>
+	<string>
+
+1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\projekt.cpp
+	<exception>
+	"Lekser.h"
+	"Token_Types.h"
+
+1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.h
+	"FileReader.h"
+	"Token.h"
+
+1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token.h
+	<string>
+	"Token_Types.h"
+
+1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token_types.h
+	<unordered_map>
+	<string>
+
+1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.cpp
+	"Lekser.h"
+	<cctype>
+	<algorithm>
+	"Keywords.h"
+
+1587327068 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\keywords.h
+	<unordered_map>
+	"Token_Types.h"
+
