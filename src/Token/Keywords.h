@@ -3,7 +3,7 @@
 
 #include<unordered_map>
 #include"Token_Types.h"
-using TokenType = tokenUtils::TokenType;
+using TokenType = tokenUtils::TokenTypes;
 
 namespace tokenUtils
 {
@@ -26,7 +26,7 @@ namespace tokenUtils
 		{ "void", TokenType::Void },
 		{ "int", TokenType::Int },
 		{ "char", TokenType::Char },
-		{ "break", TokenType::Break }
+		{ "string", TokenType::String}
 	};
 
 	const std::unordered_map<char, TokenType>& simpleSigns = {

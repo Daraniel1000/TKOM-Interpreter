@@ -3,15 +3,16 @@
 
 #include<string>
 #include"Token_Types.h"
-using TokenType = tokenUtils::TokenType;
+using TokenTypes = tokenUtils::TokenTypes;
 
 struct Token
 {
 	Token() = default;
-	Token(const TokenType& type) : type(type) {}
+	Token(const TokenTypes& type) : type(type) {}
 
-	TokenType type = TokenType::Invalid;
+	TokenTypes type = TokenTypes::Invalid;
 	std::string value = "";
+	int valueInt = 0;
 	unsigned int line = 0;
 	unsigned int pos = 0;
 	std::streampos lineStart;

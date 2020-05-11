@@ -29,18 +29,63 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Tests">
+				<Option output="bin/Tests/TKOM-Interpreter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Tests/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="src/FileReader.cpp" />
-		<Unit filename="src/FileReader.h" />
-		<Unit filename="src/Keywords.h" />
-		<Unit filename="src/Lekser.cpp" />
-		<Unit filename="src/Lekser.h" />
-		<Unit filename="src/Token.h" />
-		<Unit filename="src/Token_Types.h" />
-		<Unit filename="src/projekt.cpp" />
+		<Unit filename="src/FileReader/FileReader.cpp" />
+		<Unit filename="src/FileReader/FileReader.h" />
+		<Unit filename="src/Lekser/Lekser.cpp" />
+		<Unit filename="src/Lekser/Lekser.h" />
+		<Unit filename="src/Tests/catch.hpp">
+			<Option target="Tests" />
+		</Unit>
+		<Unit filename="src/Tests/tests.cpp">
+			<Option target="Tests" />
+		</Unit>
+		<Unit filename="src/Token/Keywords.h" />
+		<Unit filename="src/Token/Token.h" />
+		<Unit filename="src/Token/Token_Types.h" />
+		<Unit filename="src/ast/AST.hpp" />
+		<Unit filename="src/ast/nodes/Assignable.hpp" />
+		<Unit filename="src/ast/nodes/Assignment.hpp" />
+		<Unit filename="src/ast/nodes/Call.hpp" />
+		<Unit filename="src/ast/nodes/ClassDefinition.hpp" />
+		<Unit filename="src/ast/nodes/Condition.hpp" />
+		<Unit filename="src/ast/nodes/DeleteStatement.hpp" />
+		<Unit filename="src/ast/nodes/Expression.hpp" />
+		<Unit filename="src/ast/nodes/FunDefinition.hpp" />
+		<Unit filename="src/ast/nodes/LoopJump.hpp" />
+		<Unit filename="src/ast/nodes/MainDefinition.hpp" />
+		<Unit filename="src/ast/nodes/NewClass.hpp" />
+		<Unit filename="src/ast/nodes/NewVariable.hpp" />
+		<Unit filename="src/ast/nodes/NumberLiteral.hpp" />
+		<Unit filename="src/ast/nodes/Program.hpp" />
+		<Unit filename="src/ast/nodes/ReturnStatement.hpp" />
+		<Unit filename="src/ast/nodes/StatementBlock.hpp" />
+		<Unit filename="src/ast/nodes/StringLiteral.hpp" />
+		<Unit filename="src/ast/nodes/SwitchStatement.hpp" />
+		<Unit filename="src/ast/nodes/VarDeclaration.hpp" />
+		<Unit filename="src/ast/nodes/Variable.hpp" />
+		<Unit filename="src/ast/nodes/WhileStatement.hpp" />
+		<Unit filename="src/parser/Parser.cpp" />
+		<Unit filename="src/parser/Parser.hpp" />
+		<Unit filename="src/projekt.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/tracer/Tracer.cpp" />
+		<Unit filename="src/tracer/Tracer.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

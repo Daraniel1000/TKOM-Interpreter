@@ -1,10 +1,14 @@
 #include"Lekser.h"
 #include<cctype>
 #include<algorithm>
-#include"Keywords.h"
+#include<istream>
+#include"../Token/Keywords.h"
 using namespace std;
 
 Lekser::Lekser(const string& file): reader(file)
+{}
+
+Lekser::Lekser(istream& stream): reader(stream)
 {}
 
 const Token Lekser::nextToken()
@@ -18,7 +22,7 @@ const Token Lekser::nextToken()
 	token.line = reader.getCurrentLineNo();
 	token.pos = reader.getCurrentSignPos() - 1;
 	token.lineStart = reader.getCurrentLinePos();
-	if (reader.hasFinished())
+	if (reader.hasFinished() || sign==0)
 	{
 		//EOF
 		token.type = TokenType::EndOfFile;
@@ -35,7 +39,7 @@ const Token Lekser::nextToken()
 		reader.rewind();
 		auto tempBuff = buffer;
 		transform(tempBuff.begin(), tempBuff.end(), tempBuff.begin(), ::tolower);
-		if (tokenUtils::keywords.count(tempBuff) == 1)
+		if (tokenUtils::keywords.find(tempBuff) != tokenUtils::keywords.end())
 		{
 			//sł. kluczowe
 			token.type = tokenUtils::keywords.at(tempBuff);
@@ -58,7 +62,7 @@ const Token Lekser::nextToken()
 		} while (isdigit(sign));
 		reader.rewind();
 		token.type = TokenType::NumberLiteral;
-		token.value = buffer;
+		token.valueInt = atoi(buffer.c_str());
 	}
 	else
 	{
@@ -143,6 +147,33 @@ const Token Lekser::nextToken()
 				}
 				break;
 			}
+			case '/':
+			{
+				if (reader.nextSign() == '/')
+				{
+				    reader.seekSign('\n');
+				    reader.rewind();
+					token.type = TokenType::Comment;
+				}
+				else
+				{
+					reader.rewind();
+					token.type = TokenType::Divide;
+				}
+				break;
+			}
+			case '"':
+			{
+			    string s = reader.seekSign('"');
+			    if(s == "\0")
+                    token.type = TokenType::Invalid;
+			    else
+                {
+                    token.type = TokenType::StringLiteral;
+                    token.value = s;
+                }
+				break;
+			}
 			default:
 			{
 				if (tokenUtils::simpleSigns.count(sign) == 1)
@@ -157,6 +188,8 @@ const Token Lekser::nextToken()
 			}
 		}
 	}
+	if(token.type == TokenType::Comment)
+        return this->nextToken();
 	return token;
 }
 

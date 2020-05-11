@@ -3,10 +3,12 @@ class Ulamek
 	int licznik;
 	int mianownik;
 }
-
+//ugabuga
 main
 {
 	Ulamek i;
 	i.licznik = 1 + 1 * 2;
 	i.mianownik = 8 / 2 - 1;
+	string s = "asdf";
 }
+//asdf

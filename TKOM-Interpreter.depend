@@ -1,36 +1,490 @@
 # depslib dependency file v1.0
-1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.cpp
+1588967337 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.cpp
 	"FileReader.h"
 	<exception>
 
-1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.h
+1588971306 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader.h
+	<istream>
 	<fstream>
 	<string>
 
-1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\projekt.cpp
+1589164241 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\projekt.cpp
 	<exception>
-	"Lekser.h"
-	"Token_Types.h"
+	"Lekser/Lekser.h"
+	"parser/Parser.hpp"
 
-1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.h
+1588971310 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.h
 	"FileReader.h"
 	"Token.h"
 
-1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token.h
+1588969845 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token.h
 	<string>
 	"Token_Types.h"
 
-1587326757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token_types.h
+1589028584 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token_types.h
 	<unordered_map>
 	<string>
 
-1587326757 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.cpp
+1588971314 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.cpp
 	"Lekser.h"
 	<cctype>
 	<algorithm>
+	<istream>
 	"Keywords.h"
 
-1587327068 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\keywords.h
+1589028512 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\keywords.h
 	<unordered_map>
 	"Token_Types.h"
+
+1589040465 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tests\tests.cpp
+	"catch.hpp"
+	"../Lekser/Lekser.h"
+	<sstream>
+
+1588969281 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tests\catch.hpp
+	<TargetConditionals.h>
+	<ciso646>
+	<iosfwd>
+	<string>
+	<cstdint>
+	<vector>
+	<cstddef>
+	<string>
+	<iosfwd>
+	<cassert>
+	<type_traits>
+	<vector>
+	<cstddef>
+	<type_traits>
+	<string>
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<vector>
+	<string_view>
+	<utility>
+	<optional>
+	<tuple>
+	<variant>
+	<ctime>
+	<ratio>
+	<chrono>
+	<iosfwd>
+	<string>
+	<chrono>
+	<string>
+	<vector>
+	<cstddef>
+	<string>
+	<cstdint>
+	<string>
+	<string>
+	<memory>
+	<exception>
+	<string>
+	<vector>
+	<type_traits>
+	<string>
+	<iosfwd>
+	<vector>
+	<string>
+	<vector>
+	<functional>
+	<string>
+	<string>
+	<algorithm>
+	<memory>
+	<exception>
+	<memory>
+	<vector>
+	<cassert>
+	<utility>
+	<exception>
+	<memory>
+	<chrono>
+	<iosfwd>
+	<string>
+	<vector>
+	<memory>
+	<cstdint>
+	<random>
+	<string>
+	<vector>
+	<memory>
+	<string>
+	<string>
+	<vector>
+	<memory>
+	<string>
+	<memory>
+	<vector>
+	<string>
+	<string>
+	<string>
+	<iosfwd>
+	<map>
+	<set>
+	<memory>
+	<algorithm>
+	<algorithm>
+	<cstring>
+	<cfloat>
+	<cstdio>
+	<cassert>
+	<memory>
+	<ostream>
+	<vector>
+	<chrono>
+	<ratio>
+	<atomic>
+	<type_traits>
+	<utility>
+	<cassert>
+	<type_traits>
+	<utility>
+	<memory>
+	<type_traits>
+	<utility>
+	<tuple>
+	<type_traits>
+	<utility>
+	<utility>
+	<type_traits>
+	<algorithm>
+	<algorithm>
+	<functional>
+	<vector>
+	<iterator>
+	<numeric>
+	<tuple>
+	<cmath>
+	<utility>
+	<cstddef>
+	<random>
+	<algorithm>
+	<iterator>
+	<tuple>
+	<vector>
+	<cmath>
+	<algorithm>
+	<vector>
+	<string>
+	<iterator>
+	<algorithm>
+	<iterator>
+	<vector>
+	<algorithm>
+	<functional>
+	<string>
+	<vector>
+	<cmath>
+	<type_traits>
+	<string>
+	<vector>
+	<memory>
+	<cassert>
+	<random>
+	<future>
+	<cmath>
+	<limits>
+	<signal.h>
+	<AfxWin.h>
+	<windows.h>
+	<signal.h>
+	<string>
+	<optional>
+	<cassert>
+	<ostream>
+	<sstream>
+	<vector>
+	<cctype>
+	<string>
+	<memory>
+	<set>
+	<algorithm>
+	<fstream>
+	<ctime>
+	<cstring>
+	<ostream>
+	<sstream>
+	<unistd.h>
+	<string>
+	<android/log.h>
+	<cassert>
+	<sys/types.h>
+	<unistd.h>
+	<cstddef>
+	<ostream>
+	<sys/sysctl.h>
+	<fstream>
+	<string>
+	<stdexcept>
+	<vector>
+	<memory>
+	<map>
+	<cassert>
+	<cerrno>
+	<vector>
+	<string>
+	<memory>
+	<limits>
+	<set>
+	<crtdbg.h>
+	<set>
+	<limits>
+	<algorithm>
+	<iomanip>
+	<string>
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<cstdint>
+	<cstring>
+	<sstream>
+	<type_traits>
+	<iomanip>
+	<limits>
+	<regex>
+	<cassert>
+	<stack>
+	<cstdio>
+	<iosfwd>
+	<string>
+	<cstdio>
+	<cstring>
+	<fstream>
+	<sstream>
+	<stdexcept>
+	<io.h>
+	<unistd.h>
+	<cmath>
+	<vector>
+	<set>
+	<algorithm>
+	<ios>
+	<map>
+	<string>
+	<map>
+	<vector>
+	<exception>
+	<cassert>
+	<algorithm>
+	<sstream>
+	<memory>
+	<iosfwd>
+	<cstdlib>
+	<iomanip>
+	<set>
+	<iterator>
+	<vector>
+	<cstdio>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<memory>
+	<algorithm>
+	<ostream>
+	<cstring>
+	<cctype>
+	<vector>
+	<algorithm>
+	<ostream>
+	<cstring>
+	<cstdint>
+	<sstream>
+	<cctype>
+	<exception>
+	<algorithm>
+	<sstream>
+	<algorithm>
+	<sstream>
+	<algorithm>
+	<cassert>
+	<stdexcept>
+	<memory>
+	<sstream>
+	<algorithm>
+	<string>
+	<vector>
+	<memory>
+	<chrono>
+	<cmath>
+	<iomanip>
+	<cstddef>
+	<exception>
+	<ostream>
+	<iomanip>
+	<type_traits>
+	<cstring>
+	<cfloat>
+	<cstdio>
+	<cassert>
+	<memory>
+	<cfloat>
+	<cstdio>
+	<cassert>
+	<sstream>
+	<ctime>
+	<algorithm>
+	<cassert>
+
+1589164550 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.cpp
+	"FileReader.h"
+	<exception>
+
+1588971306 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.h
+	<istream>
+	<fstream>
+	<string>
+
+1589155845 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser\lekser.cpp
+	"Lekser.h"
+	<cctype>
+	<algorithm>
+	<istream>
+	"../Token/Keywords.h"
+
+1589040494 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser\lekser.h
+	"../FileReader/FileReader.h"
+	"../Token/Token.h"
+
+1588969845 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token\token.h
+	<string>
+	"Token_Types.h"
+
+1589028584 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token\token_types.h
+	<unordered_map>
+	<string>
+
+1589028512 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token\keywords.h
+	<unordered_map>
+	"Token_Types.h"
+
+1589048004 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\ast.cpp
+	"AST.hpp"
+
+1589160689 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\ast.hpp
+	<memory>
+	"nodes/Assignable.hpp"
+	"nodes/Assignment.hpp"
+	"nodes/Call.hpp"
+	"nodes/Expression.hpp"
+	"nodes/Condition.hpp"
+	"nodes/StringLiteral.hpp"
+	"nodes/NewVariable.hpp"
+	"nodes/NewClass.hpp"
+	"nodes/DeleteStatement.hpp"
+	"nodes/FunDefinition.hpp"
+	"nodes/SwitchStatement.hpp"
+	"nodes/LoopJump.hpp"
+	"nodes/NumberLiteral.hpp"
+	"nodes/VarDeclaration.hpp"
+	"nodes/ClassDefinition.hpp"
+	"nodes/Program.hpp"
+	"nodes/ReturnStatement.hpp"
+	"nodes/StatementBlock.hpp"
+	"nodes/MainDefinition.hpp"
+	"nodes/Variable.hpp"
+	"nodes/WhileStatement.hpp"
+
+1589164673 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\assignable.hpp
+	"../AST.hpp"
+
+1589164698 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\assignment.hpp
+	"../AST.hpp"
+
+1589159154 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\call.hpp
+	"../AST.hpp"
+	<vector>
+
+1589150530 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\expression.hpp
+	"../AST.hpp"
+	"../../Token/Token_Types.h"
+
+1589155264 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\condition.hpp
+	"../AST.hpp"
+	"../../Token/Token_Types.h"
+
+1589155066 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\stringliteral.hpp
+	"../AST.hpp"
+	<string>
+
+1589154483 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\fundefinition.hpp
+	"../AST.hpp"
+	<vector>
+	<string>
+
+1589154728 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\switchstatement.hpp
+	"../AST.hpp"
+	<vector>
+
+1589164846 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\loopjump.hpp
+	"../AST.hpp"
+
+1589136457 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\numberliteral.hpp
+	"../AST.hpp"
+
+1589157265 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\vardeclaration.hpp
+	"../AST.hpp"
+
+1589154228 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\classdefinition.hpp
+	"../AST.hpp"
+	<string>
+
+1589164913 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\program.hpp
+	"../AST.hpp"
+	<iostream>
+
+1589043283 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\returnstatement.hpp
+	"../AST.hpp"
+
+1589043304 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\statementblock.hpp
+	"../AST.hpp"
+	<vector>
+
+1589164874 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\maindefinition.hpp
+	"../AST.hpp"
+
+1589155234 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\variable.hpp
+	"../AST.hpp"
+
+1589043473 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\whilestatement.hpp
+	"../AST.hpp"
+
+1589162312 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.cpp
+	"Parser.hpp"
+	"../Lekser/Lekser.h"
+	<iostream>
+	<limits>
+
+1589160982 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.hpp
+	<initializer_list>
+	"../Token/Token.h"
+	"../Token/Token_Types.h"
+	"../tracer/Tracer.hpp"
+	"../ast/AST.hpp"
+
+1589155427 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.hpp
+	<string>
+
+1589150259 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.cpp
+	"Tracer.hpp"
+	<iostream>
+	<exception>
+
+1589157604 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\new.hpp
+	"../AST.hpp"
+
+1589161719 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newvariable.hpp
+	"../AST.hpp"
+	<string>
+
+1589159690 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newclass.hpp
+	"../AST.hpp"
+	<string>
+
+1589160764 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\deletestatement.hpp
+	"../AST.hpp"
+	<string>
 
