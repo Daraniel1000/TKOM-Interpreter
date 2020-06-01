@@ -27,9 +27,10 @@ namespace ast
             return Node::Type::Variable;
         }
 
+        bool returning = false;
         std::string variableName;
         std::string className = "";
-        std::shared_ptr<Assignable> indexArg;
+        std::shared_ptr<Assignable> indexArg = nullptr;
     };
 }
 

@@ -18,22 +18,23 @@ namespace ast
         {
             this->assignableNode = std::move(assignableNode);
         }
-        void setVarType(int type)
+        void setValueCopy(const std::shared_ptr<Assignable>& assignableNode)
+        {
+            this->assignableNode = assignableNode;
+        }
+        void setVarType(const std::string& type)
         {
             this->varType = type;
         }
-        void setClassType(const std::string& type)
-        {
-            this->classType = type;
-        }
+
         virtual Type getType()
         {
             return Node::Type::VarDeclaration;
         }
 
         std::string name;
-        int varType;
-        std::string classType = "";
+        std::string varType = "";
+        //std::string classType = "";
         std::shared_ptr<Assignable> assignableNode;
     };
 }

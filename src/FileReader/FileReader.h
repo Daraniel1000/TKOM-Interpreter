@@ -21,7 +21,6 @@ public:
 private:
     std::ifstream filestream;
 	std::istream& fin;
-	bool isFile;
 	unsigned int currentLine = 1;
 	unsigned int currentSignPos = 0;
 	std::streampos currentLinePos;

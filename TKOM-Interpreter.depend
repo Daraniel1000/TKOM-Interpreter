@@ -8,10 +8,11 @@
 	<fstream>
 	<string>
 
-1589164241 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\projekt.cpp
+1590967869 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\projekt.cpp
 	<exception>
 	"Lekser/Lekser.h"
-	"parser/Parser.hpp"
+	"parser/Parser.h"
+	"Runner/Runner.h"
 
 1588971310 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\lekser.h
 	"FileReader.h"
@@ -36,9 +37,10 @@
 	<unordered_map>
 	"Token_Types.h"
 
-1589040465 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tests\tests.cpp
+1590696509 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tests\tests.cpp
 	"catch.hpp"
 	"../Lekser/Lekser.h"
+	"../parser/Parser.h"
 	<sstream>
 
 1588969281 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tests\catch.hpp
@@ -329,11 +331,11 @@
 	<algorithm>
 	<cassert>
 
-1589164550 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.cpp
+1590695234 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.cpp
 	"FileReader.h"
 	<exception>
 
-1588971306 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.h
+1590578757 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\filereader\filereader.h
 	<istream>
 	<fstream>
 	<string>
@@ -357,14 +359,14 @@
 	<unordered_map>
 	<string>
 
-1589028512 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token\keywords.h
+1590694425 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\token\keywords.h
 	<unordered_map>
 	"Token_Types.h"
 
 1589048004 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\ast.cpp
 	"AST.hpp"
 
-1589160689 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\ast.hpp
+1590842513 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\ast.hpp
 	<memory>
 	"nodes/Assignable.hpp"
 	"nodes/Assignment.hpp"
@@ -398,11 +400,11 @@
 	"../AST.hpp"
 	<vector>
 
-1589150530 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\expression.hpp
+1590966214 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\expression.hpp
 	"../AST.hpp"
 	"../../Token/Token_Types.h"
 
-1589155264 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\condition.hpp
+1590581128 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\condition.hpp
 	"../AST.hpp"
 	"../../Token/Token_Types.h"
 
@@ -410,22 +412,22 @@
 	"../AST.hpp"
 	<string>
 
-1589154483 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\fundefinition.hpp
+1590928973 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\fundefinition.hpp
 	"../AST.hpp"
 	<vector>
 	<string>
 
-1589154728 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\switchstatement.hpp
+1590960689 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\switchstatement.hpp
 	"../AST.hpp"
 	<vector>
 
 1589164846 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\loopjump.hpp
 	"../AST.hpp"
 
-1589136457 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\numberliteral.hpp
+1590878795 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\numberliteral.hpp
 	"../AST.hpp"
 
-1589157265 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\vardeclaration.hpp
+1590971199 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\vardeclaration.hpp
 	"../AST.hpp"
 
 1589154228 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\classdefinition.hpp
@@ -436,7 +438,7 @@
 	"../AST.hpp"
 	<iostream>
 
-1589043283 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\returnstatement.hpp
+1590944298 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\returnstatement.hpp
 	"../AST.hpp"
 
 1589043304 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\statementblock.hpp
@@ -446,19 +448,19 @@
 1589164874 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\maindefinition.hpp
 	"../AST.hpp"
 
-1589155234 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\variable.hpp
+1590959591 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\variable.hpp
 	"../AST.hpp"
 
 1589043473 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\whilestatement.hpp
 	"../AST.hpp"
 
-1589162312 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.cpp
-	"Parser.hpp"
+1590981410 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.cpp
+	"Parser.h"
 	"../Lekser/Lekser.h"
 	<iostream>
 	<limits>
 
-1589160982 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.hpp
+1590581212 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.hpp
 	<initializer_list>
 	"../Token/Token.h"
 	"../Token/Token_Types.h"
@@ -468,23 +470,90 @@
 1589155427 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.hpp
 	<string>
 
-1589150259 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.cpp
-	"Tracer.hpp"
+1590582820 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.cpp
+	"Tracer.h"
 	<iostream>
 	<exception>
 
 1589157604 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\new.hpp
 	"../AST.hpp"
 
-1589161719 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newvariable.hpp
+1590700619 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newvariable.hpp
 	"../AST.hpp"
 	<string>
 
-1589159690 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newclass.hpp
+1590981119 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\newclass.hpp
 	"../AST.hpp"
 	<string>
 
 1589160764 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\ast\nodes\deletestatement.hpp
 	"../AST.hpp"
 	<string>
+
+1590581045 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\tracer\tracer.h
+	<string>
+
+1590978088 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\parser\parser.h
+	<initializer_list>
+	<vector>
+	"../Token/Token.h"
+	"../Token/Token_Types.h"
+	"../tracer/Tracer.h"
+	"../ast/AST.hpp"
+
+1590878536 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\numericvariable.hpp
+	"Variable.hpp"
+	<vector>
+
+1590970880 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\variable.hpp
+	<string>
+
+1590878545 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\stringvariable.hpp
+	"Variable.hpp"
+	<string>
+
+1590982285 source:c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\runner.cpp
+	"Runner.h"
+	<string>
+	<exception>
+	"../Token/Token_Types.h"
+
+1590976661 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\runner.h
+	<unordered_map>
+	"../parser/Parser.h"
+	"../ast/AST.hpp"
+	"ir/includes.hpp"
+
+1590867642 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\includes.hpp
+	"Variable.hpp"
+	"NumericVariable.hpp"
+	"StringVariable.hpp"
+	"ClassVariable.hpp"
+	"Function.hpp"
+	"Scope.hpp"
+
+1590878536 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\numericvariable.hpp
+	"Variable.hpp"
+	<vector>
+
+1590878545 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\stringvariable.hpp
+	"Variable.hpp"
+	<string>
+
+1590969479 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\classvariable.hpp
+	<string>
+	<unordered_map>
+	"Variable.hpp"
+	"Scope.hpp"
+	"Function.hpp"
+
+1590953260 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\scope.hpp
+	"Variable.hpp"
+	<unordered_map>
+	<memory>
+
+1590928882 c:\users\oem\documents\maciej\sztudia\tkom\tkom-interpreter\src\runner\ir\function.hpp
+	<string>
+	"Variable.hpp"
+	"../../ast/nodes/StatementBlock.hpp"
 

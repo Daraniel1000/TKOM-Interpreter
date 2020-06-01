@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add option="-v" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -47,6 +48,19 @@
 		<Unit filename="src/FileReader/FileReader.h" />
 		<Unit filename="src/Lekser/Lekser.cpp" />
 		<Unit filename="src/Lekser/Lekser.h" />
+		<Unit filename="src/Runner/Runner.cpp" />
+		<Unit filename="src/Runner/Runner.h" />
+		<Unit filename="src/Runner/ir/ClassVariable.hpp" />
+		<Unit filename="src/Runner/ir/Function.hpp" />
+		<Unit filename="src/Runner/ir/NumericVariable.hpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Runner/ir/Scope.hpp" />
+		<Unit filename="src/Runner/ir/StringVariable.hpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Runner/ir/Variable.hpp" />
+		<Unit filename="src/Runner/ir/includes.hpp" />
 		<Unit filename="src/Tests/catch.hpp">
 			<Option target="Tests" />
 		</Unit>
@@ -79,13 +93,13 @@
 		<Unit filename="src/ast/nodes/Variable.hpp" />
 		<Unit filename="src/ast/nodes/WhileStatement.hpp" />
 		<Unit filename="src/parser/Parser.cpp" />
-		<Unit filename="src/parser/Parser.hpp" />
+		<Unit filename="src/parser/Parser.h" />
 		<Unit filename="src/projekt.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/tracer/Tracer.cpp" />
-		<Unit filename="src/tracer/Tracer.hpp" />
+		<Unit filename="src/tracer/Tracer.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

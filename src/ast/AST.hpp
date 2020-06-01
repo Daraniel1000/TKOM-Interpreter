@@ -1,6 +1,11 @@
 #ifndef TKOM_AST
 #define TKOM_AST
 
+#define TYPE_VOID 0
+#define TYPE_INT 1
+#define TYPE_STRING 2
+#define TYPE_CHAR 3
+
 #include <memory>
 
 namespace ast
@@ -32,7 +37,7 @@ namespace ast
             NewClass,
             DeleteStatement
         };
-
+        virtual ~Node(){};
         virtual Type getType() = 0;
     };
 

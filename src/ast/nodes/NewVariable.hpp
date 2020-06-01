@@ -15,7 +15,7 @@ namespace ast
         {
             return Node::Type::NewVariable;
         }
-        NewVariable(int type, bool array=false, const std::shared_ptr<ast::Expression>& cap=nullptr)
+        NewVariable(const std::string type, bool array=false, const std::shared_ptr<ast::Expression>& cap=nullptr)
         {
             varType = type;
             if(array)
@@ -25,7 +25,7 @@ namespace ast
             }
         }
 
-        int varType = 0;
+        std::string varType = "";
         bool isArray = false;
         std::shared_ptr<ast::Expression> Capacity;
     };

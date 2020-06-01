@@ -1,26 +1,26 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "../Lekser/Lekser.h"
+#include "../parser/Parser.h"
 #include<sstream>
 using namespace std;
 using TokenTypes = tokenUtils::TokenTypes;
 
-TEST_CASE( "eof is caught", "[eof]" ) {
+TEST_CASE( "[lekser] eof is caught", "[eof]" ) {
     istringstream s("");
     Lekser l(s);
     REQUIRE( l.nextToken().type == TokenTypes::EndOfFile );
 }
 
-TEST_CASE( "comment is ignored", "[comment]" ) {
+TEST_CASE( "[lekser] comment is ignored", "[comment]" ) {
     istringstream s("123//main111\n123");
     Lekser l(s);
     REQUIRE( l.nextToken().type == TokenTypes::NumberLiteral );
-    REQUIRE( l.nextToken().type == TokenTypes::Comment );
     REQUIRE( l.nextToken().type == TokenTypes::NumberLiteral );
     REQUIRE( l.nextToken().type == TokenTypes::EndOfFile );
 }
 
-TEST_CASE( "keyword token types are recognized", "[keywords]" ) {
+TEST_CASE( "[lekser] keyword token types are recognized", "[keywords]" ) {
     istringstream s("class main constructor destructor new delete switch default if while return break public private void int char string");
     Lekser l(s);
     REQUIRE( l.nextToken().type == TokenTypes::Class );
@@ -37,14 +37,14 @@ TEST_CASE( "keyword token types are recognized", "[keywords]" ) {
     REQUIRE( l.nextToken().type == TokenTypes::Break );
     REQUIRE( l.nextToken().type == TokenTypes::Public );
     REQUIRE( l.nextToken().type == TokenTypes::Private );
-    REQUIRE( l.nextToken().type == TokenTypes::Void );
-    REQUIRE( l.nextToken().type == TokenTypes::Int );
-    REQUIRE( l.nextToken().type == TokenTypes::Char );
-    REQUIRE( l.nextToken().type == TokenTypes::String );
+    REQUIRE( l.nextToken().value == "void" );
+    REQUIRE( l.nextToken().value == "int" );
+    REQUIRE( l.nextToken().value == "char" );
+    REQUIRE( l.nextToken().value == "string" );
     REQUIRE( l.nextToken().type == TokenTypes::EndOfFile );
 }
 
-TEST_CASE( "identifiers are recognized", "[identifiers]" ) {
+TEST_CASE( "[lekser] identifiers are recognized", "[identifiers]" ) {
     istringstream s("asd Class words");
     Lekser l(s);
     auto t = l.nextToken();
@@ -56,7 +56,7 @@ TEST_CASE( "identifiers are recognized", "[identifiers]" ) {
     REQUIRE( t.value == "words");
 }
 
-TEST_CASE( "literals are recognized", "[literals]" ) {
+TEST_CASE( "[lekser] literals are recognized", "[literals]" ) {
     istringstream s("1234 \"asdfASDF1234\"12345 ");
     Lekser l(s);
     auto t = l.nextToken();
@@ -71,7 +71,7 @@ TEST_CASE( "literals are recognized", "[literals]" ) {
     REQUIRE( l.nextToken().type == TokenTypes::EndOfFile );
 }
 
-TEST_CASE( "signs are recognized", "[signs]" ) {
+TEST_CASE( "[lekser] signs are recognized", "[signs]" ) {
     istringstream s("===<=<>=>!=!&&&|||(){}[],;+-*/.:");
     Lekser l(s);
     REQUIRE( l.nextToken().type == TokenTypes::Equality );
@@ -101,4 +101,27 @@ TEST_CASE( "signs are recognized", "[signs]" ) {
 	REQUIRE( l.nextToken().type == TokenTypes::Dot );
 	REQUIRE( l.nextToken().type == TokenTypes::Colon );
     REQUIRE( l.nextToken().type == TokenTypes::EndOfFile );
+}
+
+TEST_CASE( "[parser] program structure", "[structure]")
+{
+    istringstream s("class name{} int fun(){} int var; main{}");
+    Lekser l(s);
+    Parser p(l, false);
+    auto tree = p.parse();
+    REQUIRE( tree->functions.size() == 1 );
+    REQUIRE( tree->classes.size() == 1 );
+    REQUIRE( tree->variables.size() == 1 );
+    REQUIRE( tree->functions.front()->name == "fun");
+    REQUIRE( tree->functions.front()->returnType == "int");
+}
+
+
+TEST_CASE( "[parser] expression", "[structure]")
+{
+    istringstream s("main{while(1 * 3 + 2 <= 1 * 3 + 2){break;}}");
+    Lekser l(s);
+    Parser p(l, false);
+    auto tree = p.parse();
+    return;
 }

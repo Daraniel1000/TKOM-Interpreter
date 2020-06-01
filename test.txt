@@ -2,13 +2,29 @@ class Ulamek
 {
 	int licznik;
 	int mianownik;
+	private int priv;
+	void divide(Ulamek other)
+	{
+		licznik = licznik * other.mianownik;
+		mianownik = mianownik * other.licznik;
+	}
+	void multiply(Ulamek other)
+	{
+		licznik = licznik * other.licznik;
+		mianownik = mianownik * other.mianownik;
+	}
 }
 //ugabuga
 main
 {
-	Ulamek i;
-	i.licznik = 1 + 1 * 2;
+	Ulamek i = new Ulamek();
+	i.licznik = 2 + 2 * 2 / (1 + 1);
 	i.mianownik = 8 / 2 - 1;
 	string s = "asdf";
+	Ulamek j = new Ulamek();
+	j.licznik = 3;
+	j.mianownik = 4;
+  	i.multiply(j);
+	print("licznik:", i.licznik, "mianownik:", i.mianownik, s);
 }
 //asdf

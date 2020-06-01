@@ -19,7 +19,7 @@ namespace ast
         {
             this->name = name;
         }
-        void setParameters(const std::vector<std::pair<int, std::string>>& parameters)
+        void setParameters(const std::vector<std::pair<std::string, std::string>>& parameters)
         {
             this->parameters = std::move(parameters);
         }
@@ -27,7 +27,7 @@ namespace ast
         {
             this->blockNode = blockNode;
         }
-        void setReturnType(const int type)
+        void setReturnType(const std::string type)
         {
             this->returnType = type;
         }
@@ -36,9 +36,10 @@ namespace ast
             return Node::Type::FunDefinition;
         }
 
+        bool isPublic = true;
         std::string name;
-        int returnType;
-        std::vector<std::pair<int, std::string>> parameters;
+        std::string returnType;
+        std::vector<std::pair<std::string, std::string>> parameters;
         std::shared_ptr<StatementBlock> blockNode;
     };
 }

@@ -1,7 +1,8 @@
 ﻿#include<iostream>
 #include<exception>
 #include"Lekser/Lekser.h"
-#include"parser/Parser.hpp"
+#include"parser/Parser.h"
+#include"Runner/Runner.h"
 using namespace std;
 using TokenType = tokenUtils::TokenTypes;
 
@@ -14,24 +15,28 @@ int main(int argc, const char** argv)
         cin >> filename;
 	}
 	else filename = string(argv[1]);
-	//TODO zrobić to lepiej
 	try
 	{
 		Lekser lekser(filename);
 		Parser parser(lekser);
-        auto i = parser.parse();
-
-		/*Lekser lekser(filename);
-		Token token = lekser.nextToken();
-		while (token.type != tokenUtils::TokenTypes::EndOfFile)
+		ast::Program tree;
+		try
 		{
-			if (token.type == tokenUtils::TokenTypes::Invalid) cout << "################# BLEDNY TOKEN #################\n";
-			cout << "Typ: " << tokenUtils::getTokenTypeName(token.type);
-			if (token.value != "")
-				cout << " zawartosc: " << token.value;
-			cout << endl;
-			token = lekser.nextToken();
-		}*/
+			tree = *parser.parse();
+		}
+		catch (invalid_argument e)
+		{
+			cout << e.what();
+		}
+		Runner runner;
+		try
+		{
+		    runner.runProgram(tree);
+		}
+		catch( std::runtime_error e)
+		{
+		    cout << e.what();
+		}
 	}
 	catch (runtime_error e)
 	{

@@ -84,6 +84,7 @@ const string FileReader::seekSign(const char& c)    //dla pomijania komentarzy i
 {
     string s = "";
     char sign = fin.get();
+    currentSignPos++;
     while(!fin.eof())
     {
         if(sign == c)
@@ -93,6 +94,17 @@ const string FileReader::seekSign(const char& c)    //dla pomijania komentarzy i
         s += sign;
         previousSign = sign;
         sign = fin.get();
+		currentSignPos++;
+		if (sign == '\n' || sign == '\r')
+		{
+			if (previousSign != sign && (previousSign == '\n' || previousSign == '\r')) {}
+			else
+			{
+				currentLine++;
+				currentSignPos = 0;
+				currentLinePos = fin.tellg();
+			}
+		}
     }
     return "\0";
 }

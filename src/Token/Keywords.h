@@ -22,11 +22,11 @@ namespace tokenUtils
 		{ "return", TokenType::Return },
 		{ "break", TokenType::Break },
 		{ "public", TokenType::Public },
-		{ "private", TokenType::Private },
+		{ "private", TokenType::Private }/*,
 		{ "void", TokenType::Void },
 		{ "int", TokenType::Int },
 		{ "char", TokenType::Char },
-		{ "string", TokenType::String}
+		{ "string", TokenType::String}*/
 	};
 
 	const std::unordered_map<char, TokenType>& simpleSigns = {

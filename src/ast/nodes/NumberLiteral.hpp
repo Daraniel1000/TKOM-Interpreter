@@ -7,7 +7,7 @@ using Node = ast::Node;
 
 namespace ast
 {
-    class NumberLiteral: public Node
+    class NumberLiteral: public Assignable
     {
     public:
         void setValue(const int value)

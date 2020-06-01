@@ -17,14 +17,14 @@ namespace ast
         }
         void addOperator(const tokenUtils::TokenTypes& operation)
         {
-            this->operations.push_back(operation);
+            this->operation = operation;
         }
         virtual Type getType()
         {
             return Node::Type::Expression;
         }
 
-        std::vector<tokenUtils::TokenTypes> operations;
+        tokenUtils::TokenTypes operation = tokenUtils::TokenTypes::Undefined;
         std::vector<ast::NodePtr> operands;
     };
 }

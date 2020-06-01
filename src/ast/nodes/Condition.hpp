@@ -5,7 +5,7 @@
 #include "../../Token/Token_Types.h"
 
 using Node = ast::Node;
-using TokenType = tokenUtils::TokenTypes;
+using TokenTypes = tokenUtils::TokenTypes;
 
 namespace ast
 {
@@ -20,7 +20,7 @@ namespace ast
         {
             this->operand2 = std::move(node);
         }
-        void setOperator(const TokenType& operation)
+        void setOperator(const TokenTypes& operation)
         {
             this->operation = operation;
         }
@@ -29,7 +29,7 @@ namespace ast
             return Node::Type::Condition;
         }
 
-        TokenType operation = TokenType::Undefined;
+        TokenTypes operation = TokenTypes::Undefined;
         std::shared_ptr<ast::Expression>  operand1, operand2;
     };
 }

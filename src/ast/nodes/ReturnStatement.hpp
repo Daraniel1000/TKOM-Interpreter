@@ -19,7 +19,7 @@ namespace ast
             return Node::Type::ReturnStatement;
         }
 
-        std::shared_ptr<Assignable> assignableNode;
+        std::shared_ptr<Assignable> assignableNode = nullptr;
     };
 }
 

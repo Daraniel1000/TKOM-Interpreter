@@ -31,7 +31,7 @@ namespace ast
         }
 
         std::shared_ptr<Expression> conditionNode;
-        std::shared_ptr<StatementBlock> defaultNode;
+        std::shared_ptr<StatementBlock> defaultNode = nullptr;
         std::vector<std::pair<std::shared_ptr<Expression> ,std::shared_ptr<StatementBlock>>> caseNodes; //first - condition, second - actions
     };
 }
