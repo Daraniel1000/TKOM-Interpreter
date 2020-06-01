@@ -24,7 +24,7 @@ int main(int argc, const char** argv)
 		{
 			tree = *parser.parse();
 		}
-		catch (invalid_argument e)
+		catch (invalid_argument& e)
 		{
 			cout << e.what();
 		}
@@ -33,12 +33,12 @@ int main(int argc, const char** argv)
 		{
 		    runner.runProgram(tree);
 		}
-		catch( std::runtime_error e)
+		catch( std::runtime_error& e)
 		{
 		    cout << e.what();
 		}
 	}
-	catch (runtime_error e)
+	catch (runtime_error& e)
 	{
 		cout << "Blad! " << e.what() << endl;
 		return 0;

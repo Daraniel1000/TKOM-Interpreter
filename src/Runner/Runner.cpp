@@ -566,7 +566,7 @@ ir::Variable* Runner::makeClassVariable(ast::VarDeclaration* var, ir::Scope& sco
         {
             this->assignVariable(variable, var->assignableNode.get(), scope);
         }
-        catch(std::runtime_error e)
+        catch(std::runtime_error& e)
         {
             delete variable;
             throw e;
@@ -586,7 +586,7 @@ ir::Variable* Runner::makeNumericVariable(ast::VarDeclaration* var, ir::Scope& s
         {
             this->assignVariable(variable, var->assignableNode.get(), scope);
         }
-        catch(std::runtime_error e)
+        catch(std::runtime_error& e)
         {
             delete variable;
             throw e;
@@ -605,7 +605,7 @@ ir::Variable* Runner::makeStringVariable(ast::VarDeclaration* var, ir::Scope& sc
         {
             this->assignVariable(variable, var->assignableNode.get(), scope);
         }
-        catch(std::runtime_error e)
+        catch(std::runtime_error& e)
         {
             delete variable;
             throw e;
@@ -682,7 +682,7 @@ void Runner::callFunction(ast::FunDefinition* function, ast::Call* call, ir::Sco
     {
         callFunction(function, call, outerScope, parentScope, dummyVar);
     }
-    catch(std::runtime_error e)
+    catch(std::runtime_error& e)
     {
         delete dummyVar;
         throw e;
@@ -757,7 +757,7 @@ ir::ClassVariable* Runner::callClassFunction(ast::Call* call, ir::Scope& outerSc
     {
         callFunction(fun, call, outerScope, parentScope, returnVal);
     }
-    catch(std::runtime_error e)
+    catch(std::runtime_error& e)
     {
         delete returnVal;
         throw e;
