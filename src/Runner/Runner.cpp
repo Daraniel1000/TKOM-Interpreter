@@ -820,6 +820,7 @@ void Runner::printValues(ast::Call* call, ir::Scope& outerScope)
 
         }
     }
+    std::cout<<std::endl;
 }
 
 void Runner::printVariable(ast::Variable* var, ir::Scope& scope)
