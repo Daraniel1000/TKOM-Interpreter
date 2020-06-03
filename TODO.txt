@@ -1,0 +1,13 @@
+testy jednostkowe,
+
+możliwość callowanie funkcji wewn. klasy z innej funkcji wewn. klasy, 
+
+(Callowanie najłatwiej zrobić poprzez dołączenie f-cji do scope)
+
+prywatność/publiczność funkcji w klasie,
+
+przenoszenie całych arrayów między sobą,
+
+analiza semantyczna przed runem, 
+
+zmiana pointerów i shared_pointerów na unique_pointery. 
