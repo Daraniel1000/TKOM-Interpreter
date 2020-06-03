@@ -1,0 +1,15 @@
+
+	int a;
+
+void fun(int a)
+{}
+
+void fun2()
+{
+int a;
+}
+
+main
+{
+	fun2();
+}

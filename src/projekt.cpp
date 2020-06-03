@@ -20,25 +20,22 @@ int main(int argc, const char** argv)
 		Lekser lekser(filename);
 		Parser parser(lekser);
 		ast::Program tree;
+		Runner runner;
 		try
 		{
 			tree = *parser.parse();
+		    	runner.runProgram(tree);
 		}
 		catch (invalid_argument& e)
 		{
 			cout << e.what();
-		}
-		Runner runner;
-		try
-		{
-		    runner.runProgram(tree);
 		}
 		catch( std::runtime_error& e)
 		{
 		    cout << e.what();
 		}
 	}
-	catch (runtime_error& e)
+	catch (exception& e)
 	{
 		cout << "Blad! " << e.what() << endl;
 		return 0;

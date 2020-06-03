@@ -28,7 +28,7 @@ namespace ir
             upperScope = s;
         }
 
-        Variable* getVariable(const std::string& name)
+        Variable* getVariable(const std::string& name, bool checkUpper = true)
         {
             auto it = this->variables.find(name);
             if (it != this->variables.end())
@@ -36,7 +36,7 @@ namespace ir
                 return it->second;//.get();
             }
 
-            if (this->upperScope != nullptr)
+            if (this->upperScope != nullptr && checkUpper)
             {
                 return this->upperScope->getVariable(name);
             }
@@ -46,7 +46,7 @@ namespace ir
 
         bool addVariable(Variable* var)
         {
-            if (this->hasVariable(var->name))
+            if (this->hasVariable(var->name, false))
             {
                 delete var;
                 return false;
@@ -55,9 +55,9 @@ namespace ir
             return true;
         }
 
-         bool hasVariable(const std::string& name)
+         bool hasVariable(const std::string& name, bool checkUpper = true)
         {
-            return this->getVariable(name) != nullptr;
+            return this->getVariable(name, checkUpper) != nullptr;
         }
 
 
